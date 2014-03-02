@@ -1,0 +1,11 @@
+content preffolder defaults/preferences/
+content defective-color-vision-simulator chrome/chromeFiles/content/
+
+overlay chrome://browser/content/browser.xul chrome://defective-color-vision-simulator/content/BrowserOverlay.xul
+
+
+locale defective-color-vision-simulator en-US locale/en-US/
+
+
+skin defective-color-vision-simulator classic/1.0 chrome/chromeFiles/skin/classic/
+style chrome://global/content/customizeToolbar.xul  chrome://defective-color-vision-simulator/skin/overlay.css

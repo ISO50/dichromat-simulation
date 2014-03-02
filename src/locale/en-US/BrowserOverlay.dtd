@@ -1,0 +1,32 @@
+
+
+<!-- Option menu -->
+<!ENTITY OptionWindow.title "Options">
+
+<!ENTITY OptionWindow.algoritmGroupboxcaption.label "Algorithm Options">
+<!ENTITY OptionWindow.UIGroupboxcaption.label "UI Options">
+<!ENTITY OptionWindow.checkboxStylesheet.label "Process Stylesheets">
+<!ENTITY OptionWindow.checkboxglobalStylesheet.label "Global Stylesheets">
+<!ENTITY OptionWindow.checkboxHTMLStyleAttribute.label "HTML Style Attribute">
+<!ENTITY OptionWindow.checkboxHTMLColorAttributes.label "HTML Color Attribute">
+<!ENTITY OptionWindow.checkboxImages.label "Process Images &lt;img&gt;">
+<!ENTITY OptionWindow.checkboxCSSBackgroundImage.label "CSS Background Images">
+<!ENTITY OptionWindow.checkboxHTMLBackgroundImage.label "HTML Background Images (not supported)">
+<!ENTITY OptionWindow.checkboxFrames.label "Process Frames">
+<!ENTITY OptionWindow.checkboxWebdeveloperExtension.label "Add UI to the Web Developer extension">
+<!ENTITY OptionWindow.DialogOKButton.label "Ok">
+<!ENTITY OptionWindow.DialogOKButton.accesskey "o">
+<!ENTITY OptionWindow.DialogCancelButton.label "Cancel">
+<!ENTITY OptionWindow.DialogCancelButton.accesskey "a">
+<!ENTITY OptionWindow.DialogApplyButton.label "Apply">
+<!ENTITY OptionWindow.DialogApplyButton.accesskey "p;">
+<!ENTITY OptionWindow.checkboxNewTab.label "Open result in a new Tab"> 
+<!ENTITY OptionWindow.checkboxEndProcess.label "Open an information window at the end of the process"> 
+
+<!-- Tools Menu Entry -->
+<!ENTITY ToolsEntry.openOptionsmenuButton.label "Colortool Options">
+
+<!-- Help Window -->
+<!ENTITY HelpWindow.titel.label "Help">
+<!ENTITY HelpWindow.generalhelpTab.label "General help">
+<!ENTITY HelpWindow.aboutTab.label "About">

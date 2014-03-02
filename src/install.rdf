@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:em="http://www.mozilla.org/2004/em-rdf#">
+
+  <Description about="urn:mozilla:install-manifest">
+    <em:id>{b7bb04d5-37c5-4c2b-9650-0b03ac658bf0}</em:id>
+    <em:version>5.0.6</em:version>
+    <em:type>2</em:type>
+   
+    <!-- Target Application this extension can install into, 
+         with minimum and maximum supported versions. --> 
+    <em:targetApplication>
+      <Description>
+        <em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id> <!-- Firefox -->
+        <em:minVersion>26.*</em:minVersion>
+        <em:maxVersion>27.0.*</em:maxVersion>
+      </Description>
+    </em:targetApplication>
+   
+    <!-- Front End MetaData -->
+    <em:name>Color blindness simulator</em:name>
+    <em:description>This Extension simulate how a webpage looks for people with different kinds of color blindness.</em:description>
+    <em:creator>Joerg Dotzki</em:creator>
+    <em:homepageURL>https://github.com/ISO50/dichromat-simulation</em:homepageURL>
+    <em:optionsURL>chrome://defective-color-vision-simulator/content/OptionsWindow.xul</em:optionsURL>
+    <!--em:updateURL></em:updateURL-->
+    <em:iconURL>chrome://defective-color-vision-simulator/skin/app_icon.png</em:iconURL>
+  </Description>      
+</RDF>

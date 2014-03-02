@@ -1,0 +1,105 @@
+<?xml version="1.0"?>
+
+<!-- ***** BEGIN LICENSE BLOCK *****
+   - Version: MPL 1.1/GPL 2.0/LGPL 2.1
+   -
+   - The contents of this file are subject to the Mozilla Public License Version
+   - 1.1 (the "License"); you may not use this file except in compliance with
+   - the License. You may obtain a copy of the License at
+   - http://www.mozilla.org/MPL/
+   -
+   - Software distributed under the License is distributed on an "AS IS" basis,
+   - WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
+   - for the specific language governing rights and limitations under the
+   - License.
+   -
+   - The Original Code is Joerg Dotzki code.
+   -
+   - The Initial Developer of the Original Code is
+   - Joerg Dotzki
+   - Portions created by the Initial Developer are Copyright (C) 2007
+   - the Initial Developer. All Rights Reserved.
+   -
+   - Contributor(s):
+   -   Joerg Dotzki
+   -
+   - Alternatively, the contents of this file may be used under the terms of
+   - either the GNU General Public License Version 2 or later (the "GPL"), or
+   - the GNU Lesser General Public License Version 2.1 or later (the "LGPL"),
+   - in which case the provisions of the GPL or the LGPL are applicable instead
+   - of those above. If you wish to allow use of your version of this file only
+   - under the terms of either the GPL or the LGPL, and not to allow others to
+   - use your version of this file under the terms of the MPL, indicate your
+   - decision by deleting the provisions above and replace them with the notice
+   - and other provisions required by the LGPL or the GPL. If you do not delete
+   - the provisions above, a recipient may use your version of this file under
+   - the terms of any one of the MPL, the GPL or the LGPL.
+   -
+   - ***** END LICENSE BLOCK ***** -->
+
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<?xml-stylesheet href="chrome://global/skin/preferences.css" type="text/css"?>
+<?xml-stylesheet href="chrome://global/skin/groupbox.css" type="text/css"?>
+
+<!DOCTYPE window SYSTEM "chrome://defective-color-vision-simulator/locale/BrowserOverlay.dtd" >
+
+<window
+	id="b7bb04d5-37c5-4c2b-9650-0b03ac658bf0_OptionWindow"
+	title="&OptionWindow.title;"
+	orient="horizontal"
+    autostretch="always"
+	windowtype="mozilla:prefwindow"
+	persist="width height screenX screenY zlevel"
+	onload="loadPrefsToGUI();noChange()"
+	xmlns:html="http://www.w3.org/1999/xhtml"
+	xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+    
+	<script type="application/x-javascript" src="chrome://defective-color-vision-simulator/content/AlgorithmChangeColors.js"/>
+	<script type="application/x-javascript" src="chrome://defective-color-vision-simulator/content/OptionsWindow.js"/>
+	<script type="application/x-javascript" src="chrome://defective-color-vision-simulator/content/BrowserOverlay.js"/>
+
+      
+    <vbox>
+		<!-- Algorithm Options -->
+		<groupbox>
+			<caption label="&OptionWindow.algoritmGroupboxcaption.label;" />
+			<ul style="display:block;list-style-type:none;list-style-position:outside;">
+				<li style="display:list-item"><checkbox id="b7bb04d5-37c5-4c2b-9650-0b03ac658bf0_stylesheet" oncommand="onClickStylesheetCheckox();onCheckBoxChange();" label="&OptionWindow.checkboxStylesheet.label;"/></li>
+				<li style="display:list-item">
+					
+					<li style="display:list-item"><spacer style="width: 15px"/><checkbox id="b7bb04d5-37c5-4c2b-9650-0b03ac658bf0_globalStylesheet" oncommand="onCheckBoxChange();" label="&OptionWindow.checkboxglobalStylesheet.label;"/></li>
+					<li style="display:list-item"><spacer style="width: 15px"/><checkbox id="b7bb04d5-37c5-4c2b-9650-0b03ac658bf0_HTMLStyleAttribute" oncommand="onCheckBoxChange();" label="&OptionWindow.checkboxHTMLStyleAttribute.label;"/></li>
+					
+				</li>					
+				<li style="display:list-item"><checkbox id="b7bb04d5-37c5-4c2b-9650-0b03ac658bf0_HTMLColorAttributes" oncommand="onCheckBoxChange();" label="&OptionWindow.checkboxHTMLColorAttributes.label;"/></li>
+				<li style="display:list-item"><checkbox id="b7bb04d5-37c5-4c2b-9650-0b03ac658bf0_Images" oncommand="onCheckBoxChange();" label="&OptionWindow.checkboxImages.label;" /></li>
+				<li style="display:list-item">
+					
+						<li style="display:list-item"><spacer style="width: 15px"/><checkbox id="b7bb04d5-37c5-4c2b-9650-0b03ac658bf0_CssBackgroundImages" oncommand="onCheckBoxChange();" label="&OptionWindow.checkboxCSSBackgroundImage.label;"/></li>
+						<li style="display:list-item"><spacer style="width: 15px"/><checkbox id="b7bb04d5-37c5-4c2b-9650-0b03ac658bf0_HTMLBackgroundImage" oncommand="onCheckBoxChange();" label="&OptionWindow.checkboxHTMLBackgroundImage.label;" disabled="true"/></li>
+					
+				</li>
+				<li style="display:list-item"><checkbox id="b7bb04d5-37c5-4c2b-9650-0b03ac658bf0_Frames" oncommand="onCheckBoxChange();" label="&OptionWindow.checkboxFrames.label;"/></li>
+			</ul>
+		</groupbox>
+
+		<!-- UI Options -->
+		<groupbox>
+			<caption label="&OptionWindow.UIGroupboxcaption.label;" />
+			<ul style="display:block;list-style-type:none;list-style-position:outside;">
+				<li style="display:list-item"><checkbox id="b7bb04d5-37c5-4c2b-9650-0b03ac658bf0_newTab" oncommand="onCheckBoxChange();" label="&OptionWindow.checkboxNewTab.label;" disabled="true" /></li>
+				<li style="display:list-item"><checkbox id="b7bb04d5-37c5-4c2b-9650-0b03ac658bf0_promptOnEnd" oncommand="onCheckBoxChange();" label="&OptionWindow.checkboxEndProcess.label;"/></li>
+			</ul>				
+		</groupbox>
+
+		
+		<!-- Buttons -->
+		<hbox>
+			<spacer flex="1"/>
+			<button id="b7bb04d5-37c5-4c2b-9650-0b03ac658bf0_OK" class="dialog" label="&OptionWindow.DialogOKButton.label;" accesskey="&OptionWindow.DialogOKButton.accesskey;" oncommand="savePrefs();onCloseOptionsWindow();window.close();"/>
+			<button id="b7bb04d5-37c5-4c2b-9650-0b03ac658bf0_Cancel" class="dialog" label="&OptionWindow.DialogCancelButton.label;" accesskey="&OptionWindow.DialogCancelButton.accesskey;" oncommand="window.close();"/>
+			<button id="b7bb04d5-37c5-4c2b-9650-0b03ac658bf0_OptionsWinowOption_ApplyButton" class="dialog" label="&OptionWindow.DialogApplyButton.label;" accesskey="&OptionWindow.DialogApplyButton.accesskey;" oncommand="savePrefs();noChange();"/>
+		</hbox>
+	</vbox>
+	
+</window>
